@@ -35,16 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $mail = new PHPMailer(true);
 
-        $mail->SMTPDebug = 2; // ou 3 pour encore plus de détails
-
 
         try {
             // Configuration du serveur SMTP
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Remplacez par votre serveur SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'mrlkemy@gmail.com'; // Remplacez par votre adresse email
-            $mail->Password = '95567077'; // Remplacez par votre mot de passe
+            $mail->Username = 'yemalem03@gmail.com'; // Remplacez par votre adresse email
+            $mail->Password = 'zaxgphbltyydzmvd'; // Remplacez par votre mot de passe
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 

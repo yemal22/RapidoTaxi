@@ -6,7 +6,7 @@
         </button>
 
         <div class="collapse navbar-collapse order-lg-2" id="navbarSupportedContent">
-            <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem;">
+            <ul class="nav navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link text-black" href="index.php?page=dashboard">Tableau de bord</a>
                 </li>
@@ -31,16 +31,30 @@
                     <a class="nav-link text-black" href="index.php?page=contact">Contatez-nous</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <?php
-                // Vérifier si l'utilisateur est connecté
                 if (isset($_SESSION['user_id'])) {
-                    // Afficher le lien de déconnexion si l'utilisateur est connecté
-                    echo '<li class="nav-item bg-danger rounded-2"><a class="nav-link" href="logout.php">Déconnexion</a></li>';
+                    echo '
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> ' . $_SESSION['nom_utilisateur'] . '
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Paramètres</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                    ';
                 } else {
-                    // Afficher le lien de connexion si l'utilisateur n'est pas connecté
-                    echo '<li class="nav-item bg-primary rounded-2"><a class="nav-link" href="login.php">Connexion</a></li>';
-                    echo '<li class="nav-item bg-warning rounded-2 "><a class="nav-link" href="register.php">Inscription</a></li>';
+                    echo '
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white me-2" href="login.php">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success text-white" href="register.php">Inscription</a>
+                    </li>
+                    ';
                 }
                 ?>
             </ul>
