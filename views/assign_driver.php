@@ -1,6 +1,14 @@
-<?php include_once 'includes/header.php';?>
-<body>
+<?php include_once 'includes/header.php';
+?>
+<body style="min-height: 100vh;" >
     <?php include_once 'includes/navbar.php';?>
+    <?php include_once 'auth.php';
+
+    if (!isAdmin()) {
+        echo "<p style='color: red;'>Accès refusé. Vous n'avez pas les permissions nécessaires pour accéder à cette page.</p>";
+        include_once 'includes/footer.php';
+        exit();
+    } ?>
     
     <div class="container mt-5">
         <h1>Assigner un chauffeur à une course en attente</h1>

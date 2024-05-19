@@ -20,8 +20,8 @@ class AddCourseController {
             $courseModel->saveCourse($point_depart, $point_arrivee, $date_heure, $statut);
 
             // Rediriger vers le tableau de bord après l'ajout de la course
-            header("Location: index.php?page=dashboard");
-            exit();
+            //header("Location: index.php?page=dashboard");
+            //exit();
         }
     }
 }

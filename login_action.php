@@ -24,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nom_utilisateur'] = $user['nom_utilisateur'];
             $_SESSION['role'] = $user['role'];
 
-            // Rediriger vers la page d'accueil ou une autre page appropriée
-            header("Location: index.php?page=dashboard");
+            // Rediriger vers le profil de l'utilisateur
+            header("Location: index.php?page=profile");
             exit();
         } else {
             // Le mot de passe est incorrect

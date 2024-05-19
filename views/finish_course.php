@@ -1,6 +1,16 @@
-<?php include_once 'includes/header.php';?>
-<body>
+<?php include_once 'includes/header.php'; ?>
+<body style="min-height: 100vh;" >
     <?php include_once 'includes/navbar.php';?>
+
+<?php
+    include_once 'auth.php';
+    if (!isAdmin() && !isDriver()) {
+        echo "<p style='color: red;'>Accès refusé. Vous n'avez pas les permissions nécessaires pour accéder à cette page.</p>";
+        include_once 'includes/footer.php';
+        exit();
+    }    
+?>
+
     
     <div class="container mt-6">
         <h1>Terminer une course en cours</h1>

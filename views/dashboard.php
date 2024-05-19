@@ -1,10 +1,12 @@
 <?php
+include_once 'auth.php';
+
 include_once 'includes/header.php'; 
 ?>
 <body>
     <?php include_once 'includes/navbar.php'; ?>
     
-    <div class="container mt-5">
+    <div class="container mt-1">
         <h1>Tableau de bord</h1>
         <div class="row">
             <?php foreach ($courses as $course): ?>

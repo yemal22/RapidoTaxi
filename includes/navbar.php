@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark text-black " data-scroll-header >
+<nav class="navbar navbar-expand-lg navbar-dark " data-scroll-header >
     <div class="container">
         <a class="navbar-brand rapido" href="index.php"><span class="rapido"></span>Taxi<span class="taxi">RAPIDO</span>Express<span></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                             <i class="fas fa-user"></i> ' . $_SESSION['nom_utilisateur'] . '
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="index.php?page=profile">Profil</a></li>
                             <li><a class="dropdown-item" href="#">Paramètres</a></li>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
                         </ul>

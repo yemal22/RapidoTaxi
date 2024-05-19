@@ -6,7 +6,7 @@ class CourseModel {
         include_once 'config/config.php';
 
         // Requête SQL pour sélectionner toutes les courses
-        $sql = "SELECT * FROM courses";
+        $sql = "SELECT * FROM courses ORDER BY course_id DESC";
 
         // Préparer la requête
         $req = $connexion->prepare($sql);

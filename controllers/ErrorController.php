@@ -6,9 +6,10 @@ class ErrorController {
 
         // Afficher un message d'erreur générique
         ?>
-        <div class="container mt-5">
-            <h1>Erreur</h1>
-            <p>Une erreur s'est produite. Veuillez réessayer plus tard.</p>
+        <div class="container mt-5 text-center">
+            <h1>404 - Page non trouvée</h1>
+            <p>Oups! La page que vous cherchez n'existe pas.</p>
+            <a href="index.php" class="btn btn-primary">Retour à l'accueil</a>
         </div>
         <?php
 

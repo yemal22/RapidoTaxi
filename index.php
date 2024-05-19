@@ -9,7 +9,7 @@
     ?>
     <body>
         <?php include_once 'includes/navbar.php'; ?>
-        <section class="bg-position-top-center bg-repeat-0 pt-5">
+        <section class="bg-position-top-center bg-repeat-0 pt-2">
         
             <?php
 
@@ -22,7 +22,7 @@
                     ?>
                     <!-- <img src="imgs/hero-img.png" alt="hero-image" class=" img-fluid "> -->
                     
-                        <div class="container pt-5">
+                        <div class="container pt-1">
                             <div class="row pt-lg-4 pt-xl-5">
                                 <div class="col-lg-4 col-md-5 pt-3 pt-md-4 pt-lg-5">
                                     <h1 class="display-4 text-light pb-2 mb-4 me-md-n5">Bienvenue chez TaxiRapido Express</h1>
@@ -48,6 +48,11 @@
                 case 'assign_driver':
                     include_once 'controllers/AssignDriverController.php';
                     $controller = new AssignDriverController();
+                    $controller->index();
+                    break;
+                case 'profile':
+                    include_once 'controllers/ProfileController.php';
+                    $controller = new ProfileController();
                     $controller->index();
                     break;
                 case 'finish_course':
